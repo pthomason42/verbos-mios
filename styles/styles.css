@@ -69,7 +69,7 @@ td {
   border: 1px solid grey;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   body {
     margin-left: auto;
     margin-right: auto;
