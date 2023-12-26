@@ -1553,18 +1553,17 @@ const verbs = {
 };
 
 const infinitives = Object.keys(verbs);
-// console.log(infinitives[(Math.floor(Math.random() * infinitives.length))]);
 // pt# we should grab the whole object?
 const todaysVerb = infinitives[Math.floor(Math.random() * infinitives.length)];
 
-console.log(
-  "todaysVerb: ",
-  todaysVerb,
-  " - ",
-  JSON.stringify(verbs[todaysVerb])
-);
+// console.log(
+  // "todaysVerb: ",
+  // todaysVerb,
+  // " - ",
+  // JSON.stringify(verbs[todaysVerb])
+// );
 
-document.getElementById("word").innerHTML = todaysVerb;
+document.getElementById("word").innerHTML = todaysVerb || "oops!";
 
 document.getElementById("pres_yo").innerHTML = verbs[todaysVerb].pres.yo;
 document.getElementById("pres_tu").innerHTML = verbs[todaysVerb].pres.tu;
