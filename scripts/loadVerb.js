@@ -1554,14 +1554,16 @@ const verbs = {
 
 const infinitives = Object.keys(verbs);
 // pt# we should grab the whole object?
-const todaysVerb = infinitives[Math.floor(Math.random() * infinitives.length)];
 
-// console.log(
-  // "todaysVerb: ",
-  // todaysVerb,
-  // " - ",
-  // JSON.stringify(verbs[todaysVerb])
-// );
+const today = Date.now();
+console.log('today : ', today );
+const oneDay = 1000 * 60 * 60 * 24 // milli, sec, min, hour
+console.log('oneDay : ', oneDay );
+const todayDay = (today / oneDay).toFixed(0);
+console.log('todayDay : ', todayDay );
+const todaysIndex = todayDay % infinitives.length;
+console.log('todaysIndex : ', todaysIndex );
+const todaysVerb = infinitives[todaysIndex];
 
 document.getElementById("word").innerHTML = todaysVerb || "oops!";
 
