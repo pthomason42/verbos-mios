@@ -1555,12 +1555,19 @@ const verbs = {
 const infinitives = Object.keys(verbs);
 
 const today = Date.now();
+const tmpDate = new Date();
+// console.log(typeof(today));
+const offset = tmpDate.getTimezoneOffset(); // doesn't respect DST
+// console.log('offset: ', tmpDate.getTimezoneOffset());
 const oneDay = 1000 * 60 * 60 * 24 // milli, sec, min, hour
-const todayDay = (today / oneDay).toFixed(0);
+const localToday = today + offset;
+const todayDay = (localToday / oneDay).toFixed(0);
 const todaysIndex = todayDay % infinitives.length;
 const todaysVerb = infinitives[todaysIndex];
 
-document.getElementById("word").innerHTML = todaysVerb || "oops!";
+const todaysVerbSpan = `<a href="https://www.wordreference.com/es/en/translation.asp?spen=${todaysVerb}">${todaysVerb}</a>`
+// console.log('todaysVerbSpan : ', todaysVerbSpan );
+document.getElementById("word").innerHTML = todaysVerbSpan || "oops!";
 
 document.getElementById("pres_yo").innerHTML = verbs[todaysVerb].pres.yo;
 document.getElementById("pres_tu").innerHTML = verbs[todaysVerb].pres.tu;
