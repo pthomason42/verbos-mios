@@ -1,4 +1,4 @@
-// pt# need to import verbs and todaysVerb to satisfy linter
+import { todaysVerbObj } from "./loadVerb.js";
 const tenses = ['pres', 'imperf', 'past', 'futur'];
 // const persons = ['yo', 'tu', 'el', 'nosotros', 'ustedes'];
 
@@ -9,7 +9,7 @@ for (let i = 0; i < tenses.length; i += 1) {
   for (let j = 0; j < divInputs.length; j += 1) {
     const input = divInputs[j];
     const inputId = divInputs[j].id;
-    const translation = verbs[todaysVerb][tense][inputId];
+    const translation = todaysVerbObj[tense][inputId];
     input.onchange = function () {
       if (input.value === translation) {
         input.className = 'correct';

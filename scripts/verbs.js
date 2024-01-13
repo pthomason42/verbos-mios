@@ -1,4 +1,4 @@
-const verbs = {
+export const verbs = {
   abrir: {
     translation: 'To Open',
     past: {
@@ -1550,5 +1550,3 @@ const verbs = {
     },
   },
 };
-
-export verbs;

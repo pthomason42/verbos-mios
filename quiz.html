@@ -7,7 +7,7 @@
     <title>Verbos Mios</title>
   </head>
   <body>
-    <h1 id="top">bienvenidos a verbos mios</h1>
+    <a href="index.html"> <h1 id="top">bienvenidos a verbos mios</h1></a>
     <div class="word-is">
       <p>today's word is: <span id="word"></span></p>
       <p id="definition"></p>
@@ -21,20 +21,13 @@
       </div>
     </div>
     <div class="conjugation" id="pres">
-      <a href="https://www.tellmeinspanish.com/grammar/present-tense-spanish/">
         <h4 class="congujation-type">Present</h4>
-      </a>
       <table>
         <tr class="row">
           <td class="column">Yo</td>
           <td class="column" id="pres_yo">
             <input type="text" id="yo" name="pres_yo_in" />
           </td>
-          <!---------
-          <td class="column">
-            <button id="turn-in" onclick="myFunction()">turn-in</button>
-          </td>
-          ---------!>
         </tr>
         <tr class="row">
           <td class="column">Tú</td>
@@ -60,20 +53,11 @@
             <input type="text" id="ustedes" name="" />
           </td>
         </tr>
-        <!------------
-        <tr class="row">
-          <td class="column"></td>
-          <td class="column">
-            <button id="turn-in" onclick="myFunction()">turn-in</button>
-          </td>
-          ---------!>
         </tr>
       </table>
     </div>
     <div class="conjugation" id="past">
-      <a href="https://www.tellmeinspanish.com/grammar/spanish-preterite/">
         <h4 class="congujation-type">Preterite</h4>
-      </a>
       <table>
         <tr class="row">
           <td class="column">Yo</td>
@@ -108,11 +92,7 @@
       </table>
     </div>
     <div class="conjugation" id="imperf">
-      <a
-        href="https://www.tellmeinspanish.com/grammar/spanish-imperfect-tense/"
-      >
         <h4 class="congujation-type">Imperfect</h4>
-      </a>
       <table>
         <tr class="row">
           <td class="column">Yo</td>
@@ -147,9 +127,7 @@
       </table>
     </div>
     <div class="conjugation" id="futur">
-      <a href="https://www.tellmeinspanish.com/grammar/spanish-future-tense/">
         <h4 class="congujation-type">Future</h4>
-      </a>
       <table>
         <tr class="row">
           <td class="column">Yo</td>
@@ -184,6 +162,5 @@
       </table>
     </div>
   </body>
-  <script src="scripts/loadVerb.js"></script>
-  <script src="scripts/loadQuiz.js"></script>
+  <script src="scripts/loadQuiz.js" type="module"></script>
 </html>
