@@ -5,7 +5,9 @@ body {
   color: white;
   width: 65%;
 }
-
+input {
+  border: 2px solid pink;
+}
 table {
   margin-left: auto;
   margin-right: auto;
@@ -23,6 +25,22 @@ td {
 #word {
   color: pink;
   font-size: 40px;
+}
+
+.correct {
+  color: green;
+  border: 2px solid green;
+}
+.false {
+  color: red;
+  border: 2px solid red;
+}
+
+.mode-button {
+  font-size: 30px;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .main-text {
