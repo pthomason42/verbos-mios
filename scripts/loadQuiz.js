@@ -11,7 +11,7 @@ for (let i = 0; i < tenses.length; i += 1) {
     const inputId = divInputs[j].id;
     const translation = todaysVerbObj[tense][inputId];
     input.onchange = function () {
-      if (input.value === translation) {
+      if (input.value.toLowerCase() === translation) {
         input.className = 'correct';
       } else {
         input.className = 'false';
